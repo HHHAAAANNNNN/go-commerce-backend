@@ -15,12 +15,19 @@ GUEST BROWSING (bisa transaksi, tapi saat mau checkout, baru popup perlu login):
     - bisa track orders
 
 COLOR PALLETES:
-    Primary: #7C3AED (Purple - premium, exclusive)
-    Secondary: #EC4899 (Pink - trendy, CTA)
-    Accent: #FBBF24 (Gold - member badge)
-    Neutral: #0F172A (dark bg), #F8FAFC (light bg), #64748B (gray)
+    Primary Colors:
+        Deep Purple/Violet ( #8B5CF6) - Royalty & Premium
+        Cyan/Teal ( #06B6D4) - Modern & Tech
+        Gold/Amber ( #F59E0B, #FCD34D) - Luxury & Exclusivity
+    Background:
+        Deepest Black ( #0A0A0F) - Main background
+        Dark Navy/Purple ( #1a0f2e, #0e1628) - Gradients
+        Charcoal layers untuk depth
+    Text:
+        Light Slate ( #F1F5F9, #E2E8F0) - Primary text
+        Slate Gray ( #94A3B8, #64748B) - Secondary text
+        Semua disesuaikan untuk contrast optimal
 
 FONT:
     Primary: font-family: 'Inter', system-ui, sans-serif;
     Secondary: font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    

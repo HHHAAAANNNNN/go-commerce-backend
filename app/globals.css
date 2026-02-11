@@ -1,26 +1,186 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0A0A0F;
+  --foreground: #F1F5F9;
+  
+  /* Dark Luxury Color Palette */
+  --primary: #8B5CF6;
+  --primary-dark: #6D28D9;
+  --secondary: #06B6D4;
+  --accent: #F59E0B;
+  --accent-gold: #FCD34D;
+  --neutral-darker: #0A0A0F;
+  --neutral-dark: #1E1B2E;
+  --neutral-mid: #2D2640;
+  --neutral-light: #F1F5F9;
+  --neutral-gray: #94A3B8;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
+  
+  /* Custom colors untuk Tailwind - Dark Luxury */
+  --color-primary-*: initial;
+  --color-primary-50: #1a0f2e;
+  --color-primary-100: #2d1b4e;
+  --color-primary-200: #4c2c85;
+  --color-primary-300: #6d3db3;
+  --color-primary-400: #8b5cf6;
+  --color-primary-500: #a78bfa;
+  --color-primary-600: #c4b5fd;
+  --color-primary-700: #ddd6fe;
+  --color-primary-800: #ede9fe;
+  --color-primary-900: #f5f3ff;
+  
+  --color-secondary-*: initial;
+  --color-secondary-50: #0a1929;
+  --color-secondary-100: #0e2744;
+  --color-secondary-200: #164e63;
+  --color-secondary-300: #06b6d4;
+  --color-secondary-400: #22d3ee;
+  --color-secondary-500: #67e8f9;
+  --color-secondary-600: #a5f3fc;
+  --color-secondary-700: #cffafe;
+  --color-secondary-800: #e0f2fe;
+  --color-secondary-900: #f0f9ff;
+  
+  --color-accent-*: initial;
+  --color-accent-50: #451a03;
+  --color-accent-100: #78350f;
+  --color-accent-200: #92400e;
+  --color-accent-300: #f59e0b;
+  --color-accent-400: #fbbf24;
+  --color-accent-500: #fcd34d;
+  --color-accent-600: #fde047;
+  --color-accent-700: #fef08a;
+  --color-accent-800: #fef9c3;
+  --color-accent-900: #fefce8;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Animations */
+@layer utilities {
+  /* Blob Animation */
+  @keyframes blob {
+    0%, 100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    25% {
+      transform: translate(150px, -120px) scale(1.3);
+    }
+    50% {
+      transform: translate(-100px, 150px) scale(0.8);
+    }
+    75% {
+      transform: translate(120px, 80px) scale(1.15);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 15s infinite ease-in-out;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  .animation-delay-6000 {
+    animation-delay: 6s;
+  }
+
+  /* Shimmer Effect */
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 8s linear infinite;
+  }
+
+  /* Fade In Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-down {
+    animation: fadeInDown 1s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+    opacity: 0;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+    opacity: 0;
+  }
+
+  /* Grid Background Pattern */
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* Noise Texture */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  /* Radial Gradient */
+  .bg-gradient-radial {
+    background-image: radial-gradient(circle at center, var(--tw-gradient-stops));
+  }
 }
