@@ -1,0 +1,26 @@
+HOSTING:
+    vercel (frontend) + railway (backend + database)
+
+SECTION FLOW:
+    - Hero Section
+    - Featured Categories
+    - Best Sellers / Trending
+    - Why Us?
+    - Social Proof
+    - CTA Section (Ready to shopping?; create free account; already member? login here; etc)
+
+GUEST BROWSING (bisa transaksi, tapi saat mau checkout, baru popup perlu login): 
+    - create account agar bisa save Cart
+    - get discount 10%
+    - bisa track orders
+
+COLOR PALLETES:
+    Primary: #7C3AED (Purple - premium, exclusive)
+    Secondary: #EC4899 (Pink - trendy, CTA)
+    Accent: #FBBF24 (Gold - member badge)
+    Neutral: #0F172A (dark bg), #F8FAFC (light bg), #64748B (gray)
+
+FONT:
+    Primary: font-family: 'Inter', system-ui, sans-serif;
+    Secondary: font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    
